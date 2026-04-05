@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>按鈕設計</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f0f23;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: #6366f1;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #4f46e5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-secondary {
+      background: #1e1e2e;
+      color: #fff;
+      border: 1px solid #333;
+    }
+    .btn-secondary:hover {
+      background: #2d2d44;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #6366f1;
+      border: 2px solid #6366f1;
+    }
+    .btn-outline:hover {
+      background: #6366f1;
+      color: #fff;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #94a3b8;
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .btn-sm { padding: 10px 20px; font-size: 0.875rem; }
+    .btn-lg { padding: 18px 36px; font-size: 1.125rem; }
+
+    @media (max-width: 480px) {
+      .button-row { flex-direction: column; width: 100%; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>按鈕設計</h1>
+  
+  <div class="button-row">
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-outline">Outline</button>
+    <button class="btn btn-ghost">Ghost</button>
+  </div>
+
+  <div class="button-row">
+    <button class="btn btn-primary btn-sm">Small</button>
+    <button class="btn btn-primary">Default</button>
+    <button class="btn btn-primary btn-lg">Large</button>
+  </div>
+</body>
+</html>
